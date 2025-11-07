@@ -1,0 +1,343 @@
+#logo {
+  width: 296px;
+  height: 296px;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed; /* Position the element relative to the viewport */
+  top: -50px; /* Position at the top of the viewport */
+  left: 0;
+}
+#logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#logo .home {
+  /* Your styles here */
+  width: 450px; /* Change the width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+  left: 50; /* Center the element horizontally */
+  transform: translateX(-50%); 
+}
+.powered-by {
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  color:white; /* Background color of the div */
+  padding: 10px; /* Padding around the text */
+   /* Optional: border for the div */
+  border-radius: 5px; /* Optional: border radius for rounded corners */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+}
+.google-style {
+  font-weight: bold; /* Bold font for the "G" */
+}
+.blue-o {
+  color: #4285F4; /* Google blue color */
+}
+.green-o {
+  color: #76c474; /* Light green color */
+}
+.mayo-a {
+  color: #fef200; /* Mayonnaise yellow color */
+}
+.tomato-i {
+  color: #d13f34; /* Tomato red color */
+}
+#message {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold; /* Make the text bold */
+  position: fixed; /* Position the element relative to the viewport */
+  top: 150px; /* Distance from the bottom of the viewport */
+  width:500px;
+  left: 50%; /* Center the element horizontally */
+  transform: translateX(-50%); 
+  color:white;/* Move the element back by half of its width to center it */
+  font-size: 24px;
+}
+#ai {
+  text-align: left; /* Align text to the left */
+}
+
+#user {
+  text-align: right; /* Align text to the right */
+}
+#talkButton {
+  position: fixed; /* Position the button relative to the viewport */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Move the button back by half of its width to center it */
+  color: white; /* Text color */
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0);
+  border: none; /* Remove border */
+  border-radius: 5px;
+}
+#overlay {
+  display: none; /* Initially hide the overlay */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 10); /* Fully transparent background */
+  z-index: 999; /* Ensure the overlay is on top of other content */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+#settings {
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  position: fixed; /* Position the element relative to the viewport */
+  top: 0px; /* Position at the top of the viewport */
+  left: 0;
+}
+#settings button {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  cursor: pointer;
+}
+#settings button img {
+  width: 100%; /* Make the image fill the button */
+  height: 100%; /* Make the image fill the button */
+  object-fit: cover; /* Ensure the image maintains aspect ratio and covers the entire button */
+}
+#preferences {
+  position: fixed;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:900px;
+  height: 500px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px; /* Rounded corners */
+  display: none; /* Hidden by default */
+  z-index: 999; /* Ensure it's above other elements */
+  padding: 10px; 
+  color:white;/* Add padding for content */
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent background with 70% opacity */
+    transition: opacity 0.3s ease-in-out;
+}
+.preferences-header {
+  text-align: center; /* Center the text */
+  margin-bottom: 10px; /* Add space below the header */
+}
+
+.preferences-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Automatically adjust columns */
+  grid-gap: 10px; /* Add gap between items */
+}
+
+.preferences-list button {
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  padding: 10px; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Change cursor to pointer */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+}
+
+.preferences-list button.selected {
+  background-color: #7FDBFF; /* Change background color of selected buttons */
+}
+
+#submitPreferencesButton {
+  position: absolute; /* Position the button */
+  bottom: 10px; /* 10px from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for button width */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  padding: 10px; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Change cursor to pointer */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+}
+
+#submitPreferencesButton:hover {
+  background-color: #7FDBFF; /* Lighten background on hover */
+}
+#submitPreferencesButton.disabled {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  color: #aaa; /* Dim text color */
+  text-decoration: line-through; /* Add line-through decoration */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+#start {
+  
+  color:rgb(0, 0, 0);
+  width:200px;
+  height:auto;
+  transform: translateX(-50%); /* Adjust for button width */
+  background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent background */
+  padding: 10px; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Change cursor to pointer */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+  font-size: 24px;
+  color:white;
+  
+}
+
+#start:hover {
+  background-color: #7FDBFF; /* Lighten background on hover */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+  color:white;
+}
+#animatedDiv {
+  opacity: 0;
+  position: absolute;
+  height: 86vh;
+  top: 75px;
+  width: 15%;
+  background-color: rgba(0, 0, 0, 255);
+  transition: opacity 1s ease-in-out;
+  z-index: 999;
+  border: 1px solid white;
+  border-radius: 10px;
+  
+}
+#divlist {
+  
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  
+  
+  display: grid;
+  justify-content: center;
+}
+
+#animatedDiv button {
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.0);
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+#animatedDiv button:hover {
+  background-color: #7FDBFF;
+}
+
+/* Adjust grid to have one row per button */
+#animatedDiv {
+  grid-template-rows: repeat(auto);
+}
+
+#color {
+  position: fixed;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:700px;
+  height: 500px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px; /* Rounded corners */
+  display: none; /* Hidden by default */
+  z-index: 999; /* Ensure it's above other elements */
+  padding: 10px; 
+  color:white;/* Add padding for content */
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent background with 70% opacity */
+    transition: opacity 0.3s ease-in-out;
+    
+
+  
+}
+
+.color-header {
+  text-align: center; /* Center the text */
+  margin-bottom: 10px; /* Add space below the header */
+}
+#color button {
+  color: rgb(0, 0, 0);
+
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.0);
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#color button:hover {
+  background-color: #7FDBFF;
+}
+#color button.selected {
+  background-color: #7FDBFF;
+}
+#CustomColor {
+  position: fixed;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+  top: 60vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:700px;
+  height: 300px;
+  border-radius: 10px; /* Rounded corners */
+  display: none; /* Hidden by default */
+  z-index: 999; /* Ensure it's above other elements */
+  padding: 10px; 
+  color:white;/* Add padding for content */
+  background-color: rgba(0, 0, 0, 0); /* Transparent background with 70% opacity */
+  transition: opacity 0.3s ease-in-out;
+}
+#CusColWeek {
+  position: fixed;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font family */
+  font-weight: bold;
+  top: 60vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:700px;
+  height: 300px;
+  border-radius: 10px; /* Rounded corners */
+  display: none; /* Hidden by default */
+  z-index: 999; /* Ensure it's above other elements */
+  padding: 10px; 
+  color:white;/* Add padding for content */
+  background-color: rgba(0, 0, 0, 0); /* Transparent background with 70% opacity */
+  transition: opacity 0.3s ease-in-out;
+}
+.color-picker {
+  width: 25%;
+  height:25%;
+  border: 1px solid rgb(255, 255, 255);
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
