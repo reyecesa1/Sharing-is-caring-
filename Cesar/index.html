@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casual Conversations</title>
+  <link rel="stylesheet" href="CesarApp.css">
+</head>
+
+<body>
+  <div id="settings">
+    <button onclick="toggleOpacity()"><img src="Settings.png" alt="Settings"></button>
+  </div>
+
+  <div id="logo">
+    <img src="Logo_None.png" class="home">
+    <button id="start" onclick="window.location.href='CesarApp.html'">Start Talking</button>
+  </div>
+
+  <div id="preferences">
+    <div class="preferences-header">Please select preferences</div>
+    <ul class="preferences-list">
+      <li><button onclick="togglePreference(this)">PlaceHolder1</button></li>
+      <li><button onclick="togglePreference(this)">PlaceHolder2</button></li>
+      <li><button onclick="togglePreference(this)">PlaceHolder3</button></li>
+      <li><button onclick="togglePreference(this)">PlaceHolder4</button></li>
+      <li><button onclick="togglePreference(this)">PlaceHolder5</button></li>
+      <li><button onclick="togglePreference(this)">PlaceHolder6</button></li>
+      <li><button onclick="togglePreference(this)">PlaceHolder7</button></li>
+      <li><button onclick="togglePreference(this)">PlaceHolder8</button></li>
+
+      <!-- Add more preferences as needed -->
+    </ul>
+    <button id="submitPreferencesButton" onclick="save()">Save</button>
+  </div>
+  <div id="color">
+    <div class="color-header">Color Settings</div>
+
+    <button class="button" onclick="toggleButton(2)">Default</button>
+    <button class="button" onclick="toggleButton(3)">Custom Color</button>
+    <button class="button" onclick="toggleButton(4)">Custom Color per Week</button>
+    <div id="CustomColor">
+      <input type="color" class="color-picker" id="colorPicker">
+      <button class="save-button" onclick="saveColor()">Save</button>
+    </div>
+    <div id="CusColWeek"></div>
+  </div>
+
+  <div id="animatedDiv">
+    <div id="divlist">
+      <button onclick="preferences()">Preferences</button>
+      <button onclick="color()">Color</button>
+    </div>
+  </div>
+  <script src="CesarApp.js"></script>
+  <script>
+    window.onload = function () {
+      center("logo"); // Call the function when the page loads
+      clearPreferences()
+      preferences();
+      preferences();
+      color();
+      customColor();
+      customColorWeek();
+    };
+
+
+  </script>
+</body>
+
+</html>
